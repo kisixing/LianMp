@@ -4,15 +4,22 @@
  */
 
 import '@babel/polyfill';
+import router from 'umi/router';
+import { Modal } from 'antd-mobile';
+
+const Alert = Modal.alert;
 
 function isWeixn() {
   const ua = navigator.userAgent.toLowerCase();
   return ua.includes('microMessenger');
 }
 
-if (!isWeixn()) {
-  alert('请在微信客户端打开');
-  window.location.replace('/404');
+if (isWeixn()) {
+  Alert('提示', '请在微信客户端打开', [
+    { text: '确定', onPress: () => router.replace('/404') },
+  ]);
+  // alert('请在微信客户端打开');
+  // window.location.replace('/404');
 } else {
   console.log('debug')
 }
