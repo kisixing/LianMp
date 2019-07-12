@@ -1,0 +1,44 @@
+.tabs {
+  height:  ~'calc(100vh - 46px)';
+
+  :global(.am-tabs-default-bar-tab) {
+    height: 56px;
+  }
+}
+
+.title {
+  text-align: center;
+  padding: .3rem 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: .34rem;
+    margin-right: 8px;
+    margin-bottom: 1px;
+  }
+
+  span {
+    font-size: .34rem;
+    height: .4rem;
+    line-height: .4rem;
+  }
+}
+
+.active_tab {
+  span {
+    font-weight: bold;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: .48rem 0;
+
+  :global(.am-activity-indicator) {
+    justify-content: center;
+  }
+}

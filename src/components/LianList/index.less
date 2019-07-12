@@ -1,0 +1,72 @@
+
+.icon(@url: url('../../assets/index/like.png')) {
+  display: inline-block;
+  min-width: .6rem;
+  padding-left: .36rem;
+  background: @url no-repeat left center ;
+  background-size: .26rem auto;
+}
+
+.item {
+  font-size: .24rem;
+  color: #666;
+
+  .video_view {
+    position: relative;
+    width: 100%;
+    height: 3.6rem;
+    margin-bottom: .3rem;
+    background-color: rgba(0, 0, 0, .8);
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+    .play {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../assets/tab/play.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 36px;
+    }
+  }
+
+  .thumbnail {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .title {
+    font-size: .32rem;
+    color: #333;
+  }
+
+  .brief {
+    height: .44rem;
+    font-size: .24rem;
+    color: #666;
+  }
+
+  .tool {
+    margin-top: .12rem;
+    font-size: .24rem;
+    color: #666;
+
+    .like {
+      .icon(url('../../assets/index/like.png'));
+      margin-right: .4rem;
+    }
+    .liked {
+      .icon(url('../../assets/index/liked.png'));
+      margin-right: .4rem;
+    }
+    .viewnums {
+      .icon(url('../../assets/index/look.png'));
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.thumb_bg {
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  background: url("../../assets/icon/icon_wc_changshi.png") no-repeat center;
+  background-size: 1rem 1rem;
+
+  & span {
+    position: absolute;
+    right: 0;
+    top: -.08rem;
+    background: #fda9bc;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    min-width: .4rem;
+    line-height: 0.37rem;
+    text-align: center;
+    color: #fff;
+    font-size: .24rem;
+    line-height: 1.2;
+  }
+}
+
+.no_record {
+  text-align: center;
+  padding: .48rem 0;
+}
+
+.loading {
+  text-align: center;
+  padding: .48rem 0;
+
+  :global(.am-activity-indicator) {
+    justify-content: center;
+  }
+}

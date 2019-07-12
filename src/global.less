@@ -1,0 +1,65 @@
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Arial", "sans-serif";
+}
+
+ul,
+ol,
+dl {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+li {
+  list-style-type: none
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+textarea,
+input {
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  display: table-cell;
+  border-radius: 0;
+}
+
+// 解决listItem嵌套input列表多细线的问题
+.am-list-line {
+  .am-list-line {
+    &:after {
+      display: none !important;
+    }
+  }
+}
+
+// 页面跳转场景
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}

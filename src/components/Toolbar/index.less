@@ -1,0 +1,30 @@
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 1rem;
+
+  .title {
+    height: 1rem;
+    font-size: .32rem;
+    font-weight: bold;
+    position: relative;
+    padding: 0 .3rem 0 .2rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: .08rem;
+      height: .3rem;
+      top: 50%;
+      left: 0;
+      margin-top: -0.16rem;
+      background-color: #ff6084;
+    }
+  }
+
+  .more {
+    color: #ff6084;
+  }
+}

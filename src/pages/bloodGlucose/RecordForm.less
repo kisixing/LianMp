@@ -1,0 +1,78 @@
+.units {
+  font-size: .24rem;
+  font-weight: normal;
+  color: #999;
+}
+
+.blank {
+  margin: .3rem auto;
+  text-align: center;
+  border-radius: .12rem;
+  padding: 0.5rem 0;
+  border: 1px solid #ff6084;
+  color: #ff6084;
+}
+
+// 手风琴自定义样式
+.accordion {
+  .content {
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .16rem .3rem .16rem .45rem;
+      margin-bottom: 2px;
+      font-size: .24rem;
+      color: #666;
+
+      span {
+        display: inline-block;
+        width: 1.5rem;
+        text-align: right;
+
+        &:first-child {
+          text-align: left;
+        }
+        &:nth-of-type(2) {
+          font-size: .28rem;
+          color: #333;
+        }
+      }
+    }
+
+    .abnormalItem {
+      background-color: #ffffea;
+      span {
+        &:nth-of-type(3) {
+          color: #f20030;
+          // font-weight: bold;
+        }
+      }
+    }
+  }
+  &::before {
+    display: none !important;
+  }
+
+  :global {
+    .am-accordion-item {
+      margin-top: 0.24rem;
+      padding: .1rem 0;
+      border-bottom: none;
+      box-shadow: 0 3px 12px 0 rgba(206, 201, 202, 0.2);
+      border-radius: 12px;
+
+      .am-accordion-header {
+        &::after {
+          display: none !important;
+        }
+      }
+
+      .am-accordion-content-box {
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

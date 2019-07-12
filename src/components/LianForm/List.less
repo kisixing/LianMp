@@ -1,0 +1,48 @@
+.list {
+  :global {
+    .am-list-body {
+      &::before,
+      &::after {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.item {
+  padding-left: .3rem;
+
+  :global {
+    .am-list-line {
+
+      .am-list-content {
+        flex: initial;
+      }
+
+      .am-list-extra {
+        flex: 1;
+
+        .am-list-line {
+          padding-right: 0;
+
+          input,
+          textarea {
+            text-align: right;
+            font-size: .3rem;
+            color: #333;
+          }
+
+          &:after {
+            display: none !important;
+          }
+        }
+
+        input {
+          text-align: right;
+          font-size: .3rem;
+          color: #333;
+        }
+      }
+    }
+  }
+}

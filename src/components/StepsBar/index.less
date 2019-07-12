@@ -1,0 +1,57 @@
+.warpper {
+  padding-top: .50rem;
+  padding-bottom: .2rem;
+
+  .icon {
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: 50%;
+    background: #999;
+  }
+
+  :global {
+    .am-steps-item-tail {
+      width: 120%;
+      top: 7px;
+
+      &:after {
+        left: -18px;
+      }
+    }
+    .am-steps-item-content {
+      width: 90px;
+    }
+
+    .am-steps-item-title {
+      font-size: .24rem;
+      font-weight: normal;
+      color: #999;
+    }
+
+    .am-steps-item-error {
+      .am-steps-item-tail {
+        &:after {
+          background-color: #f4333c;
+        }
+      }
+
+      .am-steps-item-title {
+        color: #f4333c;
+      }
+    }
+
+    .am-steps-item-finish {
+      .am-steps-item-tail {
+        &:after {
+          background-color: #ddd;
+        }
+      }
+
+      .am-steps-item-title {
+        color: #108ee9;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+.icon(@url: url('../../assets/index/like1.png')) {
+  display: inline-block;
+  min-width: .8rem;
+  padding-left: .36rem;
+  padding-right: .1rem;
+  text-align: left;
+  background: @url no-repeat left center ;
+  background-size: .26rem auto;
+}
+
+.shareMark{
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5) url('../../../assets/shareMask.png') no-repeat top center ;
+  background-size: 100% auto;
+}
+
+.title {
+  padding-left: .36rem;
+  font-size: .36rem;
+  font-weight: 400;
+}
+
+.tools {
+  text-align: right;
+  margin: .16rem 0;
+
+  .like {
+    .icon(url('../../../assets/index/like.png'));
+  }
+  .liked {
+    .icon(url('../../../assets/index/liked.png'));
+  }
+  .viewnums {
+    .icon(url('../../../assets/index/look.png'));
+  }
+  .share {
+    .icon(url('../../../assets/index/share.png'))
+  }
+}
+
+.html_view {
+  padding: .3rem;
+
+  img {
+    width: 100%;
+  }
+}
