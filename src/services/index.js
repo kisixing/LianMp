@@ -12,6 +12,18 @@
 import { stringify } from 'qs';
 import request from '@/utils/request';
 
+ /**
+ ***************************************************************************************************
+ * 测试proxy
+ * *************************************************************************************************
+ */
+
+export async function testFetch() {
+  return request('/test/api/users');
+}
+
+/*************************************************************************************/
+
 export async function login(params) {
   return request('/api/login', {
     method: 'POST',

@@ -14,6 +14,7 @@ import styles from './styles.less';
   loading: loading.effects['login/bindUser'],
   user: login.user,
   captcha: login.captcha,
+  captchaStatus: login.captchaStatus
 }))
 class Bind extends Component {
   static propTypes = {
@@ -68,6 +69,7 @@ class Bind extends Component {
 
   getCaptcha = () => {
     const { form, dispatch } = this.props;
+    // 获取输入的手机号码
     const mobile = form.getFieldValue('mobile');
     if (!mobile) {
       return Toast.info('请输入电话号码！', 1);
@@ -78,6 +80,7 @@ class Bind extends Component {
         mobile,
       },
     }).then(() => {
+      const { captchaStatus } = this.props;
       form.setFieldsValue({ captcha: this.props.captcha });
     });
     this.countDown(60);

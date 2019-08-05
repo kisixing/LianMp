@@ -25,9 +25,15 @@ const { ArticleItem } = LianList;
 class HomePage extends Component {
   componentDidMount() {
     const { dispatch } =this.props;
+    /*********************************************/
+    dispatch({
+      type: 'home/testFetch',
+      payload: {}
+    });
+    /*********************************************/
     dispatch({
       type: 'home/fetchNews',
-    })
+    });
   }
   render() {
     const { loading, menuLists, toolLists, news } = this.props;

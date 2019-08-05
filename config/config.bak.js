@@ -1,7 +1,7 @@
-// ref: https://umijs.org/config/
+// https://umijs.org/config/
 import pageRoutes from './router.config';
-import webpackPlugin from './plugin.config';
 import theme from './theme.config';
+import webpackPlugin from './plugin.config';
 
 const plugins = [
   [
@@ -36,18 +36,21 @@ const plugins = [
     },
   ],
 ];
-
 export default {
-  treeShaking: true,
   // add for transfer to umi
   base: '',
   publicPath: '',
   define: {
     APP_TYPE: process.env.APP_TYPE || '',
   },
+  // history: 'hash', // 默认是 browser ...hash
   plugins,
+  //   exportStatic: {},
   // 路由配置
   routes: pageRoutes,
+  // Theme for antd-mobile
+  // https://mobile.ant.design/docs/react/customize-theme-cn
+  theme,
   externals: {},
   lessLoaderOptions: {
     javascriptEnabled: true,
@@ -65,6 +68,7 @@ export default {
     safari: 10,
   },
   outputPath: './dist',
+  // hash: false,
   alias: {
     '@': require('path').resolve(__dirname, 'src'),
   },
@@ -91,5 +95,4 @@ export default {
     basePath: '/',
   },
   chainWebpack: webpackPlugin,
-  theme
-}
+};

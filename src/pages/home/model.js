@@ -2,7 +2,7 @@
  * 首页state
  * created by ADMIN on 2019-07-10 19:03
  */
-import { queryNews } from '@/services';
+import { queryNews, testFetch } from '@/services';
 
 export default {
   namespace: 'home',
@@ -56,6 +56,10 @@ export default {
   },
 
   effects: {
+    *testFetch({ payload }, { call, put, select }) {
+      const res = yield call(testFetch);
+      console.log('代理测试成功！', res);
+    },
     *fetchNews(_, { call, put }) {
       const res = yield call(queryNews);
       console.log('news', res);

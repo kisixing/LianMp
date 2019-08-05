@@ -11,7 +11,7 @@ const Alert = Modal.alert;
 
 function isWeixn() {
   const ua = navigator.userAgent.toLowerCase();
-  return ua.includes('microMessenger');
+  return ua.includes('micromessenger');
 }
 
 if (isWeixn()) {

@@ -30,6 +30,9 @@ export default {
         value: '020004',
       },
     ],
+    captchaStatus: {
+      status: 1
+    },
   },
   effects: {
     *fetchLogin({ payload }, { call, put }) {

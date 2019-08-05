@@ -7,6 +7,7 @@ import Constants from '@/utils/constants';
 import request from '@/utils/request';
 import LS from 'parsec-ls';
 import { parse, stringify } from 'qs';
+// 参考https://juejin.im/post/5b657b75e51d45339e7ef82c
 import wx from 'weixin-js-sdk';
 
 let ready;
